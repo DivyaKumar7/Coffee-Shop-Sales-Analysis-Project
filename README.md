@@ -103,21 +103,14 @@ The interactive Power BI dashboard includes:
 
 ## ✨ Key Insights
 ### From SQL Analysis:
-1. **Monthly Sales Trends**:
-   - Month-on-month sales increased significantly in February (+20%) but dropped by 10% in April.
-   - Peak sales hours were between 8 AM and 11 AM.
-   
-2. **Product Performance**:
-   - Beverages contributed to 60% of sales, followed by snacks (25%).
-   - Seasonal drinks spiked during winter months.
-
-3. **Store Performance**:
-   - Urban stores outperformed rural locations, generating 70% of total revenue.
+1. Monthly Sales Trends
+2. Product Performance
+3. Sales in different locations
 
 ### From Power BI Dashboard:
-1. **Top 3 Product Categories**: Highlighted in a pie chart with their respective sales contributions.
+1. **Top 3 Product Categories**: Highlighted in a Bar chart with their respective sales contributions.
 2. **Weekday vs. Weekend Sales**:
-   - Weekends accounted for 40% of total sales, driven by higher footfall during brunch hours.
+   - Weekends accounted for around 25% of total sales.
 3. **Dynamic Tooltips**: Enhanced data storytelling by providing granular insights.
 
 ---
@@ -144,31 +137,14 @@ SELECTEDVALUE('coffee_shop_sales'[product_category]) & " | " & FORMAT(ROUND([Tot
 
 ## 📈 Sample Dashboard Visuals
 - **Monthly Sales Trends**: A line chart with month-on-month growth annotations.
-- **Hourly Sales Distribution**: Bar chart showing peak sales hours.
-- **Category-wise Sales**: Pie chart displaying sales contributions of each category.
+- **Hourly Sales Distribution**: Sales heatmap Calendar wise and Hour wise.
+- **Category-wise Sales**: Bar chart displaying sales contributions of each category.
 - **Sales Comparison Table**: Pivot table comparing sales across months and hours.
 
 ---
 
 ## 🧾 Results and Recommendations
 - **Focus on High-Performing Products**: Increase marketing efforts for top-selling beverages.
-- **Optimize Staffing**: Allocate more staff during peak hours (8 AM–11 AM).
+- **Optimize Staffing**: Allocate more staff during peak hours (7AM–10AM).
 - **Promote Weekend Offers**: Boost weekend sales through discounts and campaigns.
 - **Leverage Seasonality**: Stock more seasonal items during peak months.
-
----
-
-## 📌 How to Access the Dashboard
-1. Clone this repository:
-   ```bash
-   git clone https://github.com/DivyaKumar7/Coffee-Shop-Sales-Analysis-Project.git
-   ```
-2. Open the .pbix file in Power BI Desktop.
-3. Explore the dashboard using filters and slicers.
-
----
-
-## 👨‍💻 Author
-**Divya Kumar**  
-Aspiring Data Scientist | SQL Expert | Power BI Enthusiast  
-[LinkedIn Profile](https://www.linkedin.com/in/divya-kumar-035995242/) | [GitHub Profile](https://github.com/DivyaKumar7)
