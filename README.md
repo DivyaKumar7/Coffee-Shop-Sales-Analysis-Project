@@ -49,6 +49,39 @@ SELECT product_category,
        SUM(transaction_qty * unit_price) AS sales
 FROM coffee_shop_sales
 GROUP BY product_category;
+
+-- Month on Month increase/decrease in sales (%)
+
+DELIMITER //
+CREATE FUNCTION get_salesdiff_from_previous_month(month_number INT) 
+RETURNS DECIMAL(10,2)
+DETERMINISTIC
+BEGIN
+	DECLARE sales_diff DECIMAL(10,2);
+    WITH monthly_sales AS(
+	SELECT MONTH(transaction_date) AS month_no, SUM(transaction_qty * unit_price) AS total_sales
+	FROM coffee_shop_sales
+	GROUP BY MONTH(transaction_date))
+
+	SELECT ((SELECT total_sales
+			FROM monthly_sales
+			WHERE month_no = month_number) - 
+		   (SELECT total_sales
+			FROM monthly_sales
+			WHERE month_no = (month_number-1))) / 
+           (SELECT total_sales
+			FROM monthly_sales
+			WHERE month_no = (month_number-1)) * 100 
+            INTO sales_diff;
+    RETURN sales_diff;
+END;
+//
+DELIMITER ;
+
+SELECT get_salesdiff_from_previous_month(2) AS feb_d;
+SELECT get_salesdiff_from_previous_month(3) AS mar_d;
+SELECT get_salesdiff_from_previous_month(4) AS apr_d;
+SELECT get_salesdiff_from_previous_month(6) AS june_d;
 ```
 
 ---
