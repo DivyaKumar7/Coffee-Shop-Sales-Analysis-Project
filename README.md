@@ -99,6 +99,8 @@ The interactive Power BI dashboard includes:
   - **Tooltips**: Hover-over insights for detailed breakdowns.
   - **Filters and Slicers**: Location, product category, and time filters.
 
+https://github.com/user-attachments/assets/efea6225-ee51-4ff0-87d3-8292c7e9d5b6
+
 ---
 
 ## ✨ Key Insights
